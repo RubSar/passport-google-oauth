@@ -13,53 +13,6 @@ unobtrusively integrated into any application or framework that supports
 
     $ npm install passport-google-oauth
 
-## Usage of OAuth 1.0
-
-#### Configure Strategy
-
-The Google OAuth 1.0 authentication strategy authenticates users using a Google
-account and OAuth tokens.  The strategy requires a `verify` callback, which
-accepts these credentials and calls `done` providing a user, as well as `options`
-specifying a consumer key, consumer secret, and callback URL.
-
-```Javascript
-var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
-
-passport.use(new GoogleStrategy({
-    consumerKey: GOOGLE_CONSUMER_KEY,
-    consumerSecret: GOOGLE_CONSUMER_SECRET,
-    callbackURL: "http://127.0.0.1:3000/auth/google/callback"
-  },
-  function(token, tokenSecret, profile, done) {
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
-      return done(err, user);
-    });
-  }
-));
-```
-
-#### Authenticate Requests
-
-Use `passport.authenticate()`, specifying the `'google'` strategy, to
-authenticate requests.
-
-For example, as route middleware in an [Express](http://expressjs.com/)
-application:
-
-```Javascript
-app.get('/auth/google',
-  passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' }));
-
-app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
-```
-
-## Usage of OAuth 2.0
-
 #### Configure Strategy
 
 The Google OAuth 2.0 authentication strategy authenticates users using a Google
@@ -116,7 +69,6 @@ and the [OAuth 2.0 example](https://github.com/jaredhanson/passport-google-oauth
 [![Build Status](https://secure.travis-ci.org/jaredhanson/passport-google-oauth.png)](http://travis-ci.org/jaredhanson/passport-google-oauth)
 
 ## Credits
-
   - [Jared Hanson](http://github.com/jaredhanson)
 
 ## License
