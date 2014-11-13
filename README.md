@@ -1,9 +1,11 @@
-# Passport-Google-OAuth
+# Passport-Google-OAuth2.0
 
-[Passport](http://passportjs.org/) strategies for authenticating with [Google](http://www.google.com/)
-using OAuth 1.0a and OAuth 2.0.
+[Passport](http://passportjs.org/) strategy for authenticating with [Google](http://www.google.com/)
+using OAuth 2.0.
 
-This module lets you authenticate using Google in your Node.js applications.
+This module if a fork of [Passport-Google-OAuth](https://github.com/jaredhanson/passport-google-oauth) 
+updated to include the new Google+ endpoints and scopes.
+
 By plugging into Passport, Google authentication can be easily and
 unobtrusively integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
@@ -58,8 +60,7 @@ app.get('/auth/google/callback',
 
 ## Examples
 
-For a complete, working example, refer to the [OAuth 1.0 example](https://github.com/jaredhanson/passport-google-oauth/tree/master/examples/oauth)
-and the [OAuth 2.0 example](https://github.com/jaredhanson/passport-google-oauth/tree/master/examples/oauth2).
+For a complete, working example, refer to the [OAuth 2.0 example](https://github.com/sdalezman/passport-google-oauth/tree/master/examples).
 
 ## Tests
 
@@ -75,4 +76,4 @@ and the [OAuth 2.0 example](https://github.com/jaredhanson/passport-google-oauth
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+Copyright (c) 2012-2013 Shlomo Dalezman <[http://www.shon-elysees.com/](http://www.shon-elysees.com/)>
