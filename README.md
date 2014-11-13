@@ -3,7 +3,7 @@
 [Passport](http://passportjs.org/) strategy for authenticating with [Google](http://www.google.com/)
 using OAuth 2.0.
 
-This module if a fork of [Passport-Google-OAuth](https://github.com/jaredhanson/passport-google-oauth) 
+This module if a fork of [Passport-Google-OAuth](https://github.com/jaredhanson/passport-google-oauth), 
 updated to include the new Google+ endpoints and scopes.
 
 By plugging into Passport, Google authentication can be easily and
@@ -63,7 +63,7 @@ app.get('/auth/google/callback',
 For a complete, working example, refer to the [OAuth 2.0 example](https://github.com/sdalezman/passport-google-oauth/tree/master/examples).
 
 ## Tests
-
+    (NOTE: tests currently do not pass -> need to fix)
     $ npm install --dev
     $ make test
 
